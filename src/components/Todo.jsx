@@ -19,7 +19,7 @@ function Todo(props) {
     <form className="stack-small" onSubmit={handleSubmit}>
       <div className="form-group">
         <label className="todo-label" htmlFor={props.id}>
-          New name for {props.name}
+          Canvia el nom a: {props.name}
         </label>
         <input
           id={props.id}
@@ -36,11 +36,11 @@ function Todo(props) {
           onClick={() => setEditing(false)}
         >
           Cancel
-          <span className="visually-hidden">renaming {props.name}</span>
+          <span className="visually-hidden">renombrant {props.name}</span>
         </button>
         <button type="submit" className="btn btn__primary todo-edit">
           Save
-          <span className="visually-hidden">new name for {props.name}</span>
+          <span className="visually-hidden">nou nom per {props.name}</span>
         </button>
       </div>
     </form>
@@ -61,7 +61,7 @@ function Todo(props) {
       </div>
       <div className="btn-group">
         <button type="button" className="btn" onClick={() => setEditing(true)}>
-          Edit <span className="visually-hidden">{props.name}</span>
+          Edita <span className="visually-hidden">{props.name}</span>
         </button>
 
         <button
@@ -69,7 +69,7 @@ function Todo(props) {
           className="btn btn__danger"
           onClick={() => props.deleteTask(props.id)}
         >
-          Delete <span className="visually-hidden">{props.name}</span>
+          Esborra <span className="visually-hidden">{props.name}</span>
         </button>
       </div>
     </div>

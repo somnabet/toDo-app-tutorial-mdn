@@ -71,12 +71,13 @@ function App(props) {
     setTasks(editedTaskList);
   }
 
-  const tasksNoun = taskList.length !== 1 ? "tasks" : "task";
-  const headingText = `${taskList.length} ${tasksNoun} remaining`;
+  const tasksNoun =
+    taskList.length !== 1 ? "tasques pendents" : "tasca pendent";
+  const headingText = `${taskList.length} ${tasksNoun}`;
 
   return (
     <div className="todoapp stack-large">
-      <h1>TodoMatic</h1>
+      <h1>Tasques pendents</h1>
       <Form addTask={addTask} />
       <div className="filters btn-group stack-exception">{filterList}</div>
       <h2 id="list-heading">{headingText}</h2>
